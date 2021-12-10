@@ -45,7 +45,7 @@ export default function Home() {
         <div className="flex flex-col sm:flex-row mb-8 sm:mb-12 px-4">
           <div className="relative flex w-full sm:w-1/2 md:w-1/3 flex-wrap items-stretch mb-10 sm:mb-0 sm:mr-auto">
             <span className="absolute h-full flex items-center pl-8">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-500" viewBox="0 0 512 512" fill="currentColor"><path d="M464 428L339.92 303.9a160.48 160.48 0 0030.72-94.58C370.64 120.37 298.27 48 209.32 48S48 120.37 48 209.32s72.37 161.32 161.32 161.32a160.48 160.48 0 0094.58-30.72L428 464zM209.32 319.69a110.38 110.38 0 11110.37-110.37 110.5 110.5 0 01-110.37 110.37z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-gray-500" viewBox="0 0 512 512" fill="currentColor"><path d="M464 428L339.92 303.9a160.48 160.48 0 0030.72-94.58C370.64 120.37 298.27 48 209.32 48S48 120.37 48 209.32s72.37 161.32 161.32 161.32a160.48 160.48 0 0094.58-30.72L428 464zM209.32 319.69a110.38 110.38 0 11110.37-110.37 110.5 110.5 0 01-110.37 110.37z"/></svg>
             </span>
             <input type="text" placeholder="Search for a country..." className="text-sm pl-18 p-3 sm:py-4 shadow-md rounded-md w-full border-0 dark:bg-gray-700 dark:placeholder-gray-300 dark:placeholder-opacity-100" onChange={(term) => searchCountry(term.target.value)} />
           </div>
@@ -61,15 +61,19 @@ export default function Home() {
         </div>
 
         <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-16 px-14 sm:px-4">
-          { countries.map( (country, index) => <Link to={{ pathname: 'details', state: country }} key={index}>
-            <CountryItem
-              title={country.name}
-              image_url={country.flag}
-              population={country.population}
-              region={country.region}
-              capital={country.capital}
-            />
-          </Link>) }
+          {countries.map((country, index) => {
+            return (
+              <Link to={'/country'} state={{ country }} key={index}>
+                <CountryItem
+                  title={country.name}
+                  image_url={country.flag}
+                  population={country.population}
+                  region={country.region}
+                  capital={country.capital}
+                />
+              </Link>
+            )
+          })}
         </div>
       </div>
     </div>

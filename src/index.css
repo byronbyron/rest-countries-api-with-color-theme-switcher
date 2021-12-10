@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    min-width: 375px;
+}
+
+.image-flag img {
+    aspect-ratio: 560 / 400;
+    max-width: 560px;
+    object-fit: cover;
+}
+
+.comma span + span::before {
+    content: ', ';
+}
