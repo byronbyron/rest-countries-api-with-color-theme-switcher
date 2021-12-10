@@ -52,7 +52,7 @@ export default function Home() {
           </div>
 
           <label for="filter" className="sr-only">Filter by Region</label>
-          <select name="" id="filter" className="form-select w-48 py-3 px-4 sm:py-4 sm:px-6 shadow-md rounded-md border-0 dark:bg-gray-700" onChange={(val) => filterByRegion(val.target.value)}>
+          <select name="filter" id="filter" className="form-select w-48 py-3 px-4 sm:py-4 sm:px-6 shadow-md rounded-md border-0 dark:bg-gray-700" onChange={(val) => filterByRegion(val.target.value)}>
             <option value="">Filter by Region</option>
             <option value="africa">Africa</option>
             <option value="americas">Americas</option>
