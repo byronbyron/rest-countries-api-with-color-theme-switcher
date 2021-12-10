@@ -23,8 +23,8 @@ export default function Home() {
         <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-16 px-14 sm:px-4">
           { countries.map( (country, index) => <Link to={{ pathname: 'details', state: country }} key={index}>
             <div>
-              <img src={country.flag} />
-              <p>{country.name}</p>
+              <img src={country.flag} alt={country.name} />
+              <p><strong>{country.name}</strong></p>
               <p>{country.population}</p>
               <p>{country.region}</p>
               <p>{country.capital}</p>
