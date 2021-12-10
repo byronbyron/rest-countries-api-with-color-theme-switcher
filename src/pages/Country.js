@@ -33,7 +33,7 @@ export default function Country() {
 
         <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 gap-12 lg:gap-20 px-4">
           <div className="image-flag">
-            <img src={state.flag} alt={state.name} className="block w-full" width="560" height="400" />
+            <img src={state.flag} alt="" className="block w-full" width="560" height="400" />
           </div>
           
           <div className="lg:pt-10 lg:pl-6">

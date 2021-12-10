@@ -47,10 +47,12 @@ export default function Home() {
             <span className="absolute h-full flex items-center pl-8">
               <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-gray-500" viewBox="0 0 512 512" fill="currentColor"><path d="M464 428L339.92 303.9a160.48 160.48 0 0030.72-94.58C370.64 120.37 298.27 48 209.32 48S48 120.37 48 209.32s72.37 161.32 161.32 161.32a160.48 160.48 0 0094.58-30.72L428 464zM209.32 319.69a110.38 110.38 0 11110.37-110.37 110.5 110.5 0 01-110.37 110.37z"/></svg>
             </span>
-            <input type="text" placeholder="Search for a country..." className="text-sm pl-18 p-3 sm:py-4 shadow-md rounded-md w-full border-0 dark:bg-gray-700 dark:placeholder-gray-300 dark:placeholder-opacity-100" onChange={(term) => searchCountry(term.target.value)} />
+            <label className="sr-only" for="search">Search for a country</label>
+            <input type="text" id="search" placeholder="Search for a country..." className="text-sm pl-18 p-3 sm:py-4 shadow-md rounded-md w-full border-0 dark:bg-gray-700 dark:placeholder-gray-300 dark:placeholder-opacity-100" onChange={(term) => searchCountry(term.target.value)} />
           </div>
 
-          <select name="" id="" className="form-select w-48 py-3 px-4 sm:py-4 sm:px-6 shadow-md rounded-md border-0 dark:bg-gray-700" onChange={(val) => filterByRegion(val.target.value)}>
+          <label for="filter" className="sr-only">Filter by Region</label>
+          <select name="" id="filter" className="form-select w-48 py-3 px-4 sm:py-4 sm:px-6 shadow-md rounded-md border-0 dark:bg-gray-700" onChange={(val) => filterByRegion(val.target.value)}>
             <option value="">Filter by Region</option>
             <option value="africa">Africa</option>
             <option value="americas">Americas</option>
