@@ -8,6 +8,13 @@ module.exports = {
       'sans': ['Nunito Sans', 'sans-serif'],
     },
     extend: {
+      colors: {
+        gray: {
+           50: 'hsl(0, 0%, 98%)',
+          700: 'hsl(209, 23%, 22%)',
+          800: 'hsl(207, 26%, 17%)',
+        },
+      },
       padding: {
         '18': '4.5rem',
       },

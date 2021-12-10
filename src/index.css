@@ -4,6 +4,7 @@
 
 body {
     min-width: 375px;
+    min-height: 100vh;
 }
 
 .image-flag img {

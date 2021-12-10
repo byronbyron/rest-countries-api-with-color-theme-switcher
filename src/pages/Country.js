@@ -6,10 +6,22 @@ import Header from '../components/Header'
 export default function Country() {
   const location = useLocation()
   const state = location.state.country
-  console.log(state);
+
+  const renderBorders = () => {
+    const stateBorders = state.borders
+    if (!stateBorders) return
+    
+    const borders = stateBorders.map(border => {
+      return (
+        <li className="text-sm mb-2 mr-2 px-8 py-1 shadow-sm inline-block dark:bg-gray-700" key={border}>{border}</li>
+      )
+    })
+
+    return borders
+  }
 
   return (
-    <main className="bg-white dark:bg-gray-800 dark:text-white">
+    <main className="min-h-screen bg-white dark:bg-gray-800 dark:text-white">
       <Header />
 
       <div className="container mx-auto pb-24">
@@ -56,6 +68,16 @@ export default function Country() {
                 <li className="mb-2.5">
                   <strong className="font-semibold">Languages:</strong> <span className="text-sm comma">{state.languages.map((lang, index) => <span key={index}>{lang.name}</span>)}</span>
                 </li>
+              </ul>
+            </div>
+
+            <div className="mt-6 md:mt-14 dark:text-gray-300">
+              <p className="font-semibold whitespace-nowrap mb-3 sm:mr-4 lg:inline-block">
+                Border Countries:
+              </p>
+
+              <ul className="lg:inline-block">
+                {renderBorders()}
               </ul>
             </div>
           </div>

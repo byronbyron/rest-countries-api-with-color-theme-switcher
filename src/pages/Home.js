@@ -38,7 +38,7 @@ export default function Home() {
   }
 
   return (
-    <div className="bg-gray-50 dark:bg-gray-800 dark:text-white">
+    <main className="min-h-screen bg-gray-50 dark:bg-gray-800 dark:text-white">
       <Header />
 
       <div className="container mx-auto pb-24">
@@ -76,6 +76,6 @@ export default function Home() {
           })}
         </div>
       </div>
-    </div>
+    </main>
   )
 }
