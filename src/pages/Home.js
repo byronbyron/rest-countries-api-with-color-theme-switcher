@@ -60,7 +60,7 @@ export default function Home() {
           </select>
         </div>
 
-        <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-16 px-14 sm:px-4">
+        <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-16 lg:gap-18 px-14 sm:px-4">
           {countries.map((country, index) => {
             return (
               <Link to={'/country'} state={{ country }} key={index}>

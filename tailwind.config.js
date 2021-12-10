@@ -15,7 +15,7 @@ module.exports = {
           800: 'hsl(207, 26%, 17%)',
         },
       },
-      padding: {
+      spacing: {
         '18': '4.5rem',
       },
       boxShadow: {
